@@ -2,16 +2,25 @@
   "name": "onlycssExample",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon src/app.js"
+    "app": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freecodeO/onlyCssExample.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freecodeO/onlyCssExample/issues"
+  },
+  "homepage": "https://github.com/freecodeO/onlyCssExample#readme",
   "dependencies": {
-    "@koa/router": "^10.1.0",
-    "koa2": "^2.0.0-alpha.7"
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
