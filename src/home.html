@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>展示效果</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .display-flex {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .display-item {
+      margin: 0 10px;
+    }
+    .item-iframe {
+      width: 350px;
+      height: 280px;
+    }
+  </style>
+</head>
+<body>
+  <div class="display-flex">
+    <div class="display-item">
+      <div class="item-title">
+        <h5>Waterdroplet</h5>
+        <a href="/water">to see</a>
+      </div>
+      <iframe class="item-iframe" src="http://localhost:8080/water" frameborder="0"></iframe>
+    </div>
+
+    <div class="display-item">
+      <div class="item-title">
+        <h5>BankCard 3D </h5>
+        <a href="/bank">to see</a>
+      </div>
+      <iframe class="item-iframe" src="http://localhost:8080/bank" frameborder="0"></iframe>
+    </div>
+  </div>
+</body>
+</html>

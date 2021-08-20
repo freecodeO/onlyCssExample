@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@100&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Popppins',sans-serif;
+}
+body {
+  overflow: hidden;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1c1c25;
+}
+section::before {
+  content: '';
+  position: absolute;
+  right: -10%;
+  bottom: -40%;
+  width: 800px;
+  height: 800px;
+  background: linear-gradient(rgb(235, 27, 0), rgb(255, 72, 0), rgb(202, 142, 2));
+  border-radius: 50%;
+}
+.card {
+  position: relative;
+  width: 508px;
+  height: 314px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  color: white;
+}
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  transition: 1s;
+  backface-visibility: hidden;
+}
+
+.card:hover .face.front {
+  transform: rotateY(180deg);
+}
+.card .face.back {
+  transform: rotateY(180deg);
+}
+.card:hover .face.back {
+  transform: rotateY(360deg);
+}
+
+
+.card .face.front::before {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  
+}
+.card .face.front::after {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+}
+.card .face.front .debit {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  text-transform: uppercase;
+}
+.card .face.front .bank {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-family: 'Noto Serif SC', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.card .face.front .chip {
+  max-width: 74px;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+.card .face.front .number {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  position: absolute;
+  top: 130px;
+  left: 40px;
+  font-size: 18px;
+  letter-spacing: 10px;
+}
+.card .face.front .valid {
+  position: absolute;
+  top: 180px;
+  left: 40px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.card .face.front .valid span:last-child {
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-left: 15px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+}
+.card .face.front .name {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-family: 'Popppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.card .face.front .mechanic {
+  position: absolute;
+  bottom: 24px;
+  right: 52px;
+  font-family: 'Popppins', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #1c1c25;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+}
+.card .face.back .blackBar {
+  width: 100%;
+  height: 60px;
+  background: #000;
+  position: absolute;
+  top: 40px;
+}
+.card .face.back .intro {
+  position: absolute;
+  left: 20px;
+  bottom: 120px;
+  font-family: 'Popppins', sans-serif;
+  font-size: 12px;
+}
+.card .face.back .bank {
+  position: absolute;
+  left: 20px;
+  bottom: 40px;
+  font-family: 'Noto Serif SC', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+.card .face.back .tel {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card .face.back .tel span {
+  font-size: 12px;
+  font-family: 'Popppins', sans-serif;
+}
+.card .face.back .tel span:nth-child(1) {
+  font-size: 30px;
+  margin-right: 3px;
+}
+.card .face.back .tel span:nth-child(3) {
+  font-size: 15px;
+  margin-left: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+}
